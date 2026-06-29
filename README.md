@@ -103,11 +103,7 @@ The system detects 6 critical classes required for compliance assessment:
 - **Tools** (Class ID `5`): Maintenance tools or machinery carried by workers.
 
 ### 2. Dataset Preparation
-The system includes utility scripts under `model/training/prepare_dataset.py` to ingest XML annotation files in Pascal VOC format and normalize the data into standard YOLO format. For each bounding box:
-$$\text{x\_center} = \frac{x_{\min} + x_{\max}}{2 \times \text{width}}$$
-$$\text{y\_center} = \frac{y_{\min} + y_{\max}}{2 \times \text{height}}$$
-$$\text{bbox\_width} = \frac{x_{\max} - x_{\min}}{\text{width}}$$
-$$\text{bbox\_height} = \frac{y_{\max} - y_{\min}}{\text{height}}$$
+The system includes utility scripts under `model/training/prepare_dataset.py` to ingest XML annotation files in Pascal VOC format and normalize the data into standard YOLO format. 
 
 All coordinates are clamped within the $[0, 1]$ range. The script sets up an 80/20 train/validation split dynamically and creates the `data.yaml` configuration.
 
@@ -283,7 +279,8 @@ Allows operators to drag-and-drop or select local video recordings (MP4, AVI, MO
 
 <img width="1679" height="937" alt="Screenshot 2026-06-29 at 11 30 33 AM" src="https://github.com/user-attachments/assets/aec28fe0-c5ca-49d0-a30a-58b4a009a430" />  
 <img width="1680" height="935" alt="Screenshot 2026-06-29 at 11 32 12 AM" src="https://github.com/user-attachments/assets/c300775b-ae49-44b3-a698-fe1425d521b0" />  
-![Uploading Screenshot 2026-06-29 at 11.32.24 AM.png…]()
+<img width="1680" height="995" alt="Screenshot 2026-06-29 at 11 32 24 AM" src="https://github.com/user-attachments/assets/ff880a17-5555-4529-ad9b-2dc1aa49d83d" />
+
 
 
 
